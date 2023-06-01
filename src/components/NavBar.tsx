@@ -27,7 +27,6 @@ function NavBar() {
         } else {
             setIsScrolledAfter(false);
         }
-        console.log(window.scrollY);
     };
 
 

@@ -9,6 +9,46 @@ declare module '../animations' {
     };
 }
 
+declare module '../animations' {
+    export const transition: {
+        duration: number;
+    };
+}
+
+declare module '../animations' {
+    export const animationTextOne: {
+        textIn: {
+            x: number;
+        },
+        textOut: {
+            opacity: number;
+        }
+    }
+}
+
+declare module '../animations' {
+    export const animationTextTwo: {
+        textIn: {
+            x: number;
+        },
+        textOut: {
+            opacity: number;
+        }
+    }
+}
+
 module.exports = {
-    animationOne,
+    animationOne
+};
+
+module.exports = {
+    transition
+};
+
+module.exports = {
+    animationTextOne
+};
+
+module.exports = {
+    animationTextTwo
 };

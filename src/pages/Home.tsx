@@ -5,19 +5,40 @@ import Fence from "../assets/images/fence.jpg";
 import Pergolas from "../assets/images/pergolas.jpg";
 import OutdoorStructure from "../assets/images/outdoor_structure.jpg";
 import {motion} from "framer-motion";
-import { animationOne } from "../animations/index";
+// @ts-ignore
+import {animationOne, transition, animationTextOne, animationTextTwo} from "../animations/index";
+import NavBar from "../components/NavBar.tsx";
 
 function Home() {
 
     return (
         <motion.div
-            initial="out" animate="in" exit="out" variants={animationOne}
+            initial="out"
+            animate="in"
+            exit="out"
+            variants={animationOne}
+            transition={transition}
         >
+            <NavBar/>
+
             <section className={styles.home_hero_section}>
                 <div className={styles.home_title}>
                     <h1 className={styles.main_title}>
-                        <span>Frenchman</span>
-                        <span className={styles.text_stroke}>Carpentry</span>
+                        <motion.span
+                            initial="textOut"
+                            animate="textIn"
+                            variants={animationTextOne}
+                            transition={{duration: 0.8, delay: 1}}
+                        >Frenchman
+                        </motion.span>
+                        <motion.span
+                            className={styles.text_stroke}
+                            initial="textOut"
+                            animate="textIn"
+                            variants={animationTextTwo}
+                            transition={{duration: 0.5, delay: 1.5}}
+                        >Carpentry
+                        </motion.span>
                     </h1>
                     {/*<h2>My promise as an independent carpenter is to transform your vision into meticulously crafted*/}
                     {/*    structures*/}
