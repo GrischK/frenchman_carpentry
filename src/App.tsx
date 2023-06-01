@@ -8,8 +8,7 @@ import NavBar from "./components/NavBar.tsx";
 function App() {
 
     return (<>
-            <NavBar>
-            </NavBar>
+            <NavBar/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
             </Routes>
