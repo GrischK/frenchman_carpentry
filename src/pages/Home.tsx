@@ -4,11 +4,15 @@ import Deck from "../assets/images/deck.jpg";
 import Fence from "../assets/images/fence.jpg";
 import Pergolas from "../assets/images/pergolas.jpg";
 import OutdoorStructure from "../assets/images/outdoor_structure.jpg";
+import {motion} from "framer-motion";
+import { animationOne } from "../animations/index";
 
 function Home() {
 
     return (
-        <>
+        <motion.div
+            initial="out" animate="in" exit="out" variants={animationOne}
+        >
             <section className={styles.home_hero_section}>
                 <div className={styles.home_title}>
                     <h1 className={styles.main_title}>
@@ -36,7 +40,7 @@ function Home() {
                     <Card img={OutdoorStructure} imgAlt="outdoor structure">Outdoor structures</Card>
                 </ul>
             </section>
-        </>
+        </motion.div>
     )
 }
 
