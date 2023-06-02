@@ -27,34 +27,40 @@ app.get('/', (req, res) => {
     res.send('Bienvenue sur mon site !');
 });
 
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
 // Définition de la route pour le formulaire de contact
 app.post('/contact', (req, res) => {
     const {name, email, message} = req.body;
     console.log(name, email, message)
+    if (validateEmail(email)) {
+        const mailOptions = {
+            from: 'frenchmancarpentry@gmail.com',
+            to: 'grischka.gorski@gmail.com',
+            subject: 'Nouveau message',
+            text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
+        };
 
-    const mailOptions = {
-        from: 'frenchmancarpentry@gmail.com',
-        to: 'grischka.gorski@gmail.com',
-        subject: 'Nouveau message',
-        text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
-    };
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error(error);
+                res.status(500).send('Une erreur est survenue lors de l\'envoi de l\'e-mail');
+            } else {
+                console.log('E-mail envoyé :', info.response);
+                res.send('Formulaire de contact soumis avec succès');
+            }
+        });
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            res.status(500).send('Une erreur est survenue lors de l\'envoi de l\'e-mail');
-        } else {
-            console.log('E-mail envoyé :', info.response);
-            res.send('Formulaire de contact soumis avec succès');
-        }
-    });
+        const response = {
+            message: 'Formulaire de contact soumis avec succès'
+        };
 
-    const response = {
-        message: 'Formulaire de contact soumis avec succès'
-    };
-
-    // Renvoyer la réponse au format JSON
-    res.json(response);
+        // Renvoyer la réponse au format JSON
+        res.json(response);
+    }
 });
 
 // Démarrer le serveur
