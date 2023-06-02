@@ -8,6 +8,7 @@ import {motion} from "framer-motion";
 // @ts-ignore
 import {animationOne, transition, animationTextOne, animationTextTwo} from "../animations/index";
 import NavBar from "../components/NavBar.tsx";
+import Button from "../components/Button.tsx";
 
 function Home() {
 
@@ -44,21 +45,28 @@ function Home() {
                     {/*    structures*/}
                     {/*    that stand the test of time.*/}
                     {/*</h2>*/}
+                    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 1.5, duration: 3}}>
+                        <Button>Contact me</Button>
+                    </motion.div>
                 </div>
             </section>
             <section className={styles.home_about}>
                 <h1>About me</h1>
-                <p>Discover a passionate and skilled carpenter, dedicated to crafting bespoke creations that surpass the
+                <span>
+                    Discover a passionate<br/>and<br/> skilled carpenter
+                </span>
+                <span>
+                    dedicated to crafting bespoke creations<br/> that surpass the
                     boundaries of imagination.
-                </p>
+                </span>
             </section>
             <section className={styles.home_services}>
                 <h1>Services</h1>
                 <ul>
-                    <Card img={Deck} imgAlt="deck">Decks</Card>
-                    <Card img={Fence} imgAlt="fence">Fences</Card>
-                    <Card img={Pergolas} imgAlt="pergolas">Pergolas</Card>
-                    <Card img={OutdoorStructure} imgAlt="outdoor structure">Outdoor structures</Card>
+                    {/*<Card img={Deck} imgAlt="deck">Decks</Card>*/}
+                    {/*<Card img={Fence} imgAlt="fence">Fences</Card>*/}
+                    {/*<Card img={Pergolas} imgAlt="pergolas">Pergolas</Card>*/}
+                    {/*<Card img={OutdoorStructure} imgAlt="outdoor structure">Outdoor structures</Card>*/}
                 </ul>
             </section>
         </motion.div>
