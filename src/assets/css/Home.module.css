@@ -20,7 +20,7 @@
     justify-content: center;
 }
 
-.home_title h1, .home_about span:first-of-type {
+.home_title h1, .home_about span {
     font-family: Ultra, sans-serif;
 }
 
@@ -45,7 +45,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 48px 0;
     height: 100vh;
 }
 
@@ -60,13 +59,10 @@
     word-break: break-word;
     text-align: center;
     padding: 24px;
-}
-
-.home_about span:first-of-type {
     color: #163F5F;
 }
 
-.home_about span:nth-of-type(2) {
-    -webkit-text-stroke: 2px #163F5F;
+.home_about .text_stroke{
     color: transparent;
+    -webkit-text-stroke: 2px #163F5F;
 }

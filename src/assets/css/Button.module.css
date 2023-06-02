@@ -8,10 +8,11 @@
     cursor: pointer;
     font-weight: 700;
     font-size: 18px;
-    transition: background-color, color, 0.5s;
+    transition: background-color, color, scale 0.5s;
 }
 
 .btn:hover {
     color: #163F5F;
     background-color: #FA942F;
+    scale: 1.1;
 }

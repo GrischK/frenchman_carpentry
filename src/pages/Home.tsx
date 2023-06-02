@@ -1,14 +1,10 @@
 import styles from "../assets/css/Home.module.css";
-import Card from "../components/Card.tsx";
-import Deck from "../assets/images/deck.jpg";
-import Fence from "../assets/images/fence.jpg";
-import Pergolas from "../assets/images/pergolas.jpg";
-import OutdoorStructure from "../assets/images/outdoor_structure.jpg";
 import {motion} from "framer-motion";
 // @ts-ignore
 import {animationOne, transition, animationTextOne, animationTextTwo} from "../animations/index";
 import NavBar from "../components/NavBar.tsx";
 import Button from "../components/Button.tsx";
+import Reveal from "../components/Reveal.tsx";
 
 function Home() {
 
@@ -45,20 +41,33 @@ function Home() {
                     {/*    structures*/}
                     {/*    that stand the test of time.*/}
                     {/*</h2>*/}
-                    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 1.5, duration: 3}}>
+                    <motion.div
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{delay: 1.5, duration: 3}}
+                    >
                         <Button>Contact me</Button>
                     </motion.div>
                 </div>
             </section>
             <section className={styles.home_about}>
-                <h1>About me</h1>
-                <span>
-                    Discover a passionate<br/>and<br/> skilled carpenter
-                </span>
-                <span>
-                    dedicated to crafting bespoke creations<br/> that surpass the
-                    boundaries of imagination.
-                </span>
+                <Reveal>
+                    <h1>
+                        About me
+                    </h1>
+                </Reveal>
+                <Reveal>
+                    <span className={styles.text_stroke}>
+                        Discover a passionate<br/>and<br/> skilled carpenter
+                    </span>
+                </Reveal>
+                <Reveal>
+                    <span>
+                        dedicated to crafting bespoke creations<br/> that surpass the
+                        boundaries of imagination.
+                    </span>
+                </Reveal>
+
             </section>
             <section className={styles.home_services}>
                 <h1>Services</h1>
