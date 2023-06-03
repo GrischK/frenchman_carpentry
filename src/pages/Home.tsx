@@ -5,6 +5,11 @@ import {animationOne, transition, animationTextOne, animationTextTwo} from "../a
 import NavBar from "../components/NavBar.tsx";
 import Button from "../components/Button.tsx";
 import Reveal from "../components/Reveal.tsx";
+import Parallax from "../components/Parallax.tsx";
+import Deck from "../../public/deck.jpg";
+import Fence from "../../public/fence.jpg";
+import Pergola from "../../public/pergola.jpg";
+import Outdoor from "../../public/outdoor-structure.jpg";
 
 function Home() {
 
@@ -71,12 +76,10 @@ function Home() {
             </section>
             <section className={styles.home_services}>
                 <h1>Services</h1>
-                <ul>
-                    {/*<Card img={Deck} imgAlt="deck">Decks</Card>*/}
-                    {/*<Card img={Fence} imgAlt="fence">Fences</Card>*/}
-                    {/*<Card img={Pergolas} imgAlt="pergolas">Pergolas</Card>*/}
-                    {/*<Card img={OutdoorStructure} imgAlt="outdoor structure">Outdoor structures</Card>*/}
-                </ul>
+                <Parallax image={Deck} text={"Deck"}/>
+                <Parallax image={Fence} text={"Fence"}/>
+                <Parallax image={Pergola} text={"Pergola"}/>
+                <Parallax image={Outdoor} text={"Outdoor structure"}/>
             </section>
         </motion.div>
     )
