@@ -10,6 +10,7 @@ import Deck from "../../public/deck.jpg";
 import Fence from "../../public/fence.jpg";
 import Pergola from "../../public/pergola.jpg";
 import Outdoor from "../../public/outdoor-structure.jpg";
+import Marquee from "../components/Marquee.tsx";
 
 function Home() {
 
@@ -75,7 +76,7 @@ function Home() {
 
             </section>
             <section className={styles.home_services}>
-                <h1>Services</h1>
+                <Marquee/>
                 <Parallax image={Deck} text={"Deck"}/>
                 <Parallax image={Fence} text={"Fence"}/>
                 <Parallax image={Pergola} text={"Pergola"}/>

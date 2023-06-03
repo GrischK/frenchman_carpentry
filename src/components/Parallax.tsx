@@ -20,7 +20,7 @@ function Image({img, text}: { img: string, text: string }) {
     return (
         <section className={styles.Parallax_section}>
             <div ref={ref}>
-                <img src={img} alt="A London skyscraper"/>
+                <img src={img} alt={text}/>
             </div>
             <motion.h2 style={{y}}>{text}</motion.h2>
         </section>

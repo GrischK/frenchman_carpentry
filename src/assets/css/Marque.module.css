@@ -1,0 +1,9 @@
+.marquee_title {
+    color: transparent;
+    -webkit-text-stroke: 2px #163F5F;
+    font-family: Ultra, sans-serif;
+    padding: 24px;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+}
