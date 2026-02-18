@@ -1,0 +1,19 @@
+.card {
+    border: 1px solid #163F5F;
+    min-width: 200px;
+    max-width: 300px;
+    border-radius: 12px;
+    justify-self: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 24px;
+}

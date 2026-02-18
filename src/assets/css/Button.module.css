@@ -1,0 +1,18 @@
+.btn {
+    border: 3px solid #FA942F;
+    padding: 12px;
+    border-radius: 50px;
+    background-color: transparent;
+    font-family: "PT Serif", serif;
+    color: #FA942F;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    transition: background-color, color, scale 0.5s;
+}
+
+.btn:hover {
+    color: #163F5F;
+    background-color: #FA942F;
+    scale: 1.1;
+}

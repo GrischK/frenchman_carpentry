@@ -1,0 +1,54 @@
+    .navBar {
+        z-index: 10;
+        display: flex;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 12px;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        transition: background-color 0.5s;
+    }
+
+    .navBar a {
+        text-decoration: none;
+        /*color: #163F5F;*/
+        color: #FA942F;
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .navBar a::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: #FA942F;
+        width: 0;
+        transition: width .2s;
+        transform-origin: center;
+        margin: auto;
+    }
+
+    .navBar a:hover::after {
+        width: 100%;
+    }
+
+    .navBar div {
+        width: 50%;
+    }
+
+    .navBar img {
+        width: 125px;
+    }
+
+    .scrolled {
+        background-color: white;
+    }
+
+    .scrolledAfter {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+    }
