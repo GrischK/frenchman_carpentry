@@ -1,27 +1,27 @@
 .contact_form {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .contact_form label {
-    display: flex;
-    gap: 12px;
-    color: #163F5F;
-    font-family: "PT Serif", serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    justify-content: space-between;
+  display: flex;
+  gap: 12px;
+  color: #163F5F;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  justify-content: space-between;
 }
 
 .contact_form label input {
-    border: none;
-    border-bottom: 2px solid #163F5F;
+  border: none;
+  border-bottom: 2px solid #163F5F;
 }
 
 .contact_form label input:focus-visible {
-    border: none;
-    border-bottom: 1px solid #163F5F;
-    outline: none;
+  border: none;
+  border-bottom: 1px solid #163F5F;
+  outline: none;
 }

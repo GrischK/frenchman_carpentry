@@ -1,54 +1,54 @@
 declare module '../animations' {
-    export const animationOne: {
-        in: {
-            opacity: number;
-        };
-        out: {
-            opacity: number;
-        };
+  export const animationOne: {
+    in: {
+      opacity: number;
     };
-}
-
-declare module '../animations' {
-    export const transition: {
-        duration: number;
+    out: {
+      opacity: number;
     };
+  };
 }
 
 declare module '../animations' {
-    export const animationTextOne: {
-        textIn: {
-            x: number;
-        },
-        textOut: {
-            opacity: number;
-        }
-    }
+  export const transition: {
+    duration: number;
+  };
 }
 
 declare module '../animations' {
-    export const animationTextTwo: {
-        textIn: {
-            x: number;
-        },
-        textOut: {
-            opacity: number;
-        }
+  export const animationTextOne: {
+    textIn: {
+      x: number;
+    },
+    textOut: {
+      opacity: number;
     }
+  }
+}
+
+declare module '../animations' {
+  export const animationTextTwo: {
+    textIn: {
+      x: number;
+    },
+    textOut: {
+      opacity: number;
+    }
+  }
 }
 
 module.exports = {
-    animationOne
+  animationOne
 };
 
 module.exports = {
-    transition
+  transition
 };
 
 module.exports = {
-    animationTextOne
+  animationTextOne
 };
 
 module.exports = {
-    animationTextTwo
+  animationTextTwo
 };

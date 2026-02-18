@@ -2,13 +2,13 @@ import styles from "../assets/css/Button.module.css";
 import {ReactNode} from "react";
 
 interface ButtonProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export default function Button({children}: ButtonProps) {
-    return (
-        <button className={styles.btn}>
-            {children}
-        </button>
-    )
+  return (
+    <button className={styles.btn}>
+      {children}
+    </button>
+  )
 }
