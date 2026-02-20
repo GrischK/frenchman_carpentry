@@ -1,5 +1,5 @@
 import {motion, useScroll, useTransform} from "framer-motion";
-import styles from "../assets/css/Marque.module.css";
+import styles from "../css/Marque.module.css";
 
 export default function Marquee() {
   const {scrollYProgress} = useScroll()

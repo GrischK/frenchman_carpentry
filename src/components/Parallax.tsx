@@ -1,6 +1,6 @@
 import {useRef} from "react";
 import {motion, MotionValue, useScroll, useSpring, useTransform} from "framer-motion";
-import styles from "../assets/css/Parallax.module.css";
+import styles from "../css/Parallax.module.css";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);

@@ -1,6 +1,6 @@
 import {ReactNode, useEffect, useRef} from "react";
 import {motion, useAnimation, useInView} from "framer-motion";
-import styles from "../assets/css/Reveal.module.css";
+import styles from "../css/Reveal.module.css";
 
 interface RevealProps {
   children: ReactNode;

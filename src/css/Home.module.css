@@ -1,7 +1,7 @@
 .home_hero_section {
   width: 100%;
   height: 100vh;
-  background: url("../images/carpentry_black_white.jpg");
+  background: url("../assets/images/carpentry_black_white.jpg");
   background-size: cover;
   display: flex;
   align-items: center;

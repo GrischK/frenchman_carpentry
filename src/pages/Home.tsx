@@ -1,4 +1,4 @@
-import styles from "../assets/css/Home.module.css";
+import styles from "../css/Home.module.css";
 import {motion} from "framer-motion";
 import {animationOne, animationTextOne, animationTextTwo, transition} from "../animations/index.ts";
 import NavBar from "../components/NavBar.tsx";

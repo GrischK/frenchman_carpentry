@@ -1,4 +1,4 @@
-import styles from "../assets/css/Button.module.css";
+import styles from "../css/Button.module.css";
 import {ReactNode} from "react";
 
 interface ButtonProps {
