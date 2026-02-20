@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import {CSSProperties, useRef} from "react";
 import {motion, MotionValue, useScroll, useSpring, useTransform} from "framer-motion";
 import styles from "../css/Parallax.module.css";
 
@@ -21,7 +21,11 @@ function Image({img, text}: { img: string, text: string }) {
   );
 }
 
-export default function Parallax({image, text}: { image: string, text: string }) {
+export default function Parallax({image, text, style}: {
+  image: string,
+  text: string,
+  style?: CSSProperties | undefined
+}) {
   const {scrollYProgress} = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -30,9 +34,9 @@ export default function Parallax({image, text}: { image: string, text: string })
   });
 
   return (
-    <>
+    <div style={style}>
       <Image img={image} text={text}/>
       <motion.div className="progress" style={{scaleX}}/>
-    </>
+    </div>
   );
 }

@@ -46,14 +46,15 @@ function Home() {
           {/*    structures*/}
           {/*    that stand the test of time.*/}
           {/*</h2>*/}
-          <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{delay: 1.5, duration: 3}}
-          >
-            <Button>Contact me</Button>
-          </motion.div>
         </div>
+        <motion.div
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{delay: 1.5, duration: 3}}
+          className={styles.main_container_contact}
+        >
+          <Button>Contact me</Button>
+        </motion.div>
       </section>
       <section className={styles.home_about}>
         <Reveal>
@@ -76,10 +77,12 @@ function Home() {
       </section>
       <section className={styles.home_services}>
         <Marquee/>
-        <Parallax image={Deck} text={"Deck"}/>
-        <Parallax image={Fence} text={"Fence"}/>
-        <Parallax image={Pergola} text={"Pergola"}/>
-        <Parallax image={Outdoor} text={"Outdoor structure"}/>
+        <div style={{position:"relative"}}>
+          <Parallax image={Deck} text={"Deck"} style={{position:"absolute", top: "0"}} />
+          <Parallax image={Fence} text={"Fence"} style={{position:"absolute", right:"50px",  top: "600px"}} />
+          <Parallax image={Pergola} text={"Pergola"} style={{position:"absolute", top: "1200px"}} />
+          <Parallax image={Outdoor} text={"Outdoor structure"} style={{position:"absolute", right:"100px",   top: "1400px"}} />
+        </div>
       </section>
     </motion.div>
   )
