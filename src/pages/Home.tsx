@@ -42,10 +42,9 @@ function Home() {
             >Carpentry
             </motion.span>
           </h1>
-          {/*<h2>My promise as an independent carpenter is to transform your vision into meticulously crafted*/}
-          {/*    structures*/}
-          {/*    that stand the test of time.*/}
-          {/*</h2>*/}
+          <h2>
+            Custom Outdoor Carpentry in Vancouver Island
+          </h2>
         </div>
         <motion.div
           initial={{opacity: 0}}
@@ -53,8 +52,10 @@ function Home() {
           transition={{delay: 1.5, duration: 3}}
           className={styles.main_container_contact}
         >
-          <Button>Contact me</Button>
+          <Button>Get a Free Estimate</Button>
+          <Button>View My Work</Button>
         </motion.div>
+        <p>Transforming backyards into <br/> timeless outdoor living spaces across British Columbia.</p>
       </section>
       <section className={styles.home_about}>
         <Reveal>
@@ -73,15 +74,22 @@ function Home() {
               boundaries of imagination.
           </span>
         </Reveal>
+        <p className={styles.about_description}>
+          I’m a French-trained carpenter now building custom outdoor spaces across British Columbia.
+          With a strong focus on durability, clean lines, and structural integrity, every project I take on is built to last.
+
+          From decks and pergolas to full outdoor structures, I believe great carpentry is not just about wood. It’s about creating spaces where families gather, relax, and build memories.
+        </p>
 
       </section>
       <section className={styles.home_services}>
         <Marquee/>
-        <div style={{position:"relative"}}>
-          <Parallax image={Deck} text={"Deck"} style={{position:"absolute", top: "0"}} />
-          <Parallax image={Fence} text={"Fence"} style={{position:"absolute", right:"50px",  top: "600px"}} />
-          <Parallax image={Pergola} text={"Pergola"} style={{position:"absolute", top: "1200px"}} />
-          <Parallax image={Outdoor} text={"Outdoor structure"} style={{position:"absolute", right:"100px",   top: "1400px"}} />
+        <div style={{position: "relative"}}>
+          <Parallax image={Deck} text={"Deck"} style={{position: "absolute", top: "0"}}/>
+          <Parallax image={Fence} text={"Fence"} style={{position: "absolute", right: "50px", top: "600px"}}/>
+          <Parallax image={Pergola} text={"Pergola"} style={{position: "absolute", top: "1200px", width: "50vw"}}/>
+          <Parallax image={Outdoor} text={"Outdoor structure"}
+                    style={{position: "absolute", right: "50px", top: "1600px"}}/>
         </div>
       </section>
     </motion.div>

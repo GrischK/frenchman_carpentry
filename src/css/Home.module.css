@@ -26,9 +26,26 @@
   font-family: Ultra, sans-serif;
 }
 
+.home_title h2 {
+  margin-top: 40px;
+  font-size: 28px;
+  font-family: Arial, sans-serif;
+}
+
+.home_hero_section p {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: absolute;
+  bottom: 140px;
+  text-align: center;
+}
+
 .main_container_contact{
   position: absolute;
   bottom: 60px;
+  display: flex;
+  gap: 20px;
 }
 
 .main_title {
@@ -72,4 +89,13 @@
 .home_about .text_stroke {
   color: transparent;
   -webkit-text-stroke: 2px #163F5F;
+}
+
+.about_description{
+  color: #163F5F;
+  margin-top: 40px;
+  padding: 32px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
