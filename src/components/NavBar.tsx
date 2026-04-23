@@ -7,13 +7,6 @@ function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrolledAfter, setIsScrolledAfter] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const handleScroll = () => {
     if (window.scrollY > 10) {
       setIsScrolled(true);
@@ -28,6 +21,13 @@ function NavBar() {
       setIsScrolledAfter(false);
     }
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
 
   return (

@@ -1,18 +1,43 @@
 .btn {
-  border: 3px solid #FA942F;
-  padding: 12px;
-  border-radius: 50px;
-  background-color: transparent;
-  font-family: "PT Serif", serif;
-  color: #FA942F;
+  align-items: center;
+  background-color: #FA942F;
+  border: 2px solid #FA942F;
+  border-radius: 999px;
+  color: #12283A;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 18px;
-  transition: background-color, color, scale 0.5s;
+  display: inline-flex;
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 800;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
 }
 
 .btn:hover {
-  color: #163F5F;
-  background-color: #FA942F;
-  scale: 1.1;
+  background-color: #ffad5c;
+  border-color: #ffad5c;
+  color: #12283A;
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.72);
+  color: white;
+}
+
+.secondary:hover {
+  background-color: white;
+  border-color: white;
+  color: #12283A;
+}
+
+@media (max-width: 560px) {
+  .btn {
+    width: 100%;
+  }
 }
